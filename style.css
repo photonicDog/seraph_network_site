@@ -1,8 +1,33 @@
 @font-face {
     font-family: VCROSDMono;
     src: url(".\\VCR_OSD_MONO_1.001.ttf");
-    font-src: url(".\\VCR_OSD_MONO_1.001.ttf");
-    
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    49% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    div.console {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    div.console {
+        font-size: 24px;
+    }
 }
 
 html {
@@ -13,7 +38,7 @@ html {
 }
 
 img {
-    width: 80%;
+    width: 70%;
     min-width: 200px;
 }
 
@@ -36,18 +61,32 @@ img.top {
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
+    font-size: 12px;
 }
 
 div.console {
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-family: 'VCROSDMono', monospace;
+    text-align: left;
+}
+
+div.invis {
+    font-size: large;
+    color: rgba(0,0,0,0);
+}
+
+div.footer {
     color: white;
     font-family: 'VCROSDMono', monospace;
     font-size: large;
     text-align: center;
 }
 
-div.invis {
-    font-size: large;
-    color: rgba(0,0,0,0);
+.blink {
+    display: inline;
+    animation: blink 1s linear infinite;
 }
 
 footer {
