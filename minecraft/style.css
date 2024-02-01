@@ -1,0 +1,26 @@
+@font-face {
+    font-family: VCROSDMono;
+    src: url(".\\VCR_OSD_MONO_1.001.ttf");
+}
+
+html {
+    height: 100%;
+    padding :0;
+    display: table;
+}
+
+body {
+    font-family: 'VCROSDMono', monospace;
+    color: black;
+    margin-right: 30%;
+}
+
+span {
+    background-color: grey;
+    color: white;
+    border-radius: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
